@@ -1,0 +1,5 @@
+Введите строки (Ctrl+D для завершения):
+Papich   says normaly
+PAPICH___SAYS_NORMALY
+
+Все процессы завершены.
