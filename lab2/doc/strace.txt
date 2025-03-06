@@ -1,0 +1,137 @@
+root@LAPTOP-CGCBKBHR:/home/OS/OS_labs/lab2/src# strace -f ./evenodd 2
+execve("./evenodd", ["./evenodd", "2"], 0x7fffd37c6a20 /* 19 vars */) = 0
+brk(NULL)                               = 0x7fffdcbeb000
+arch_prctl(0x3001 /* ARCH_??? */, 0x7fffe3e65ba0) = -1 EINVAL (Invalid argument)
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fd7c3590000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=16555, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 16555, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fd7c354b000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\302\211\332Pq\2439\235\350\223\322\257\201\326\243\f"..., 68, 896) = 68
+newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=2220400, ...}, AT_EMPTY_PATH) = 0
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+mmap(NULL, 2264656, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fd7c3320000
+mprotect(0x7fd7c3348000, 2023424, PROT_NONE) = 0
+mmap(0x7fd7c3348000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7fd7c3348000
+mmap(0x7fd7c34dd000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bd000) = 0x7fd7c34dd000
+mmap(0x7fd7c3536000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x215000) = 0x7fd7c3536000
+mmap(0x7fd7c353c000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fd7c353c000
+close(3)                                = 0
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fd7c3310000
+arch_prctl(ARCH_SET_FS, 0x7fd7c3310740) = 0
+set_tid_address(0x7fd7c3310a10)         = 1845
+set_robust_list(0x7fd7c3310a20, 24)     = 0
+rseq(0x7fd7c33110e0, 0x20, 0, 0x53053053) = -1 ENOSYS (Function not implemented)
+mprotect(0x7fd7c3536000, 16384, PROT_READ) = 0
+mprotect(0x7fd7c3597000, 4096, PROT_READ) = 0
+mprotect(0x7fd7c3588000, 8192, PROT_READ) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=8192*1024}) = 0
+munmap(0x7fd7c354b000, 16555)           = 0
+newfstatat(1, "", {st_mode=S_IFCHR|0640, st_rdev=makedev(0x4, 0x2), ...}, AT_EMPTY_PATH) = 0
+ioctl(1, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+getrandom("\x3f\x95\x12\xdb\xcf\xdf\xe4\x50", 8, GRND_NONBLOCK) = 8
+brk(NULL)                               = 0x7fffdcbeb000
+brk(0x7fffdcc0c000)                     = 0x7fffdcc0c000
+newfstatat(0, "", {st_mode=S_IFCHR|0640, st_rdev=makedev(0x4, 0x2), ...}, AT_EMPTY_PATH) = 0
+ioctl(0, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+write(1, "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \321\207\320\270\321\201\320\273\320\276 \321\215\320\273\320\265"..., 61Введите число элементов массива: ) = 61
+read(0, 4
+"4\n", 4096)                    = 2
+time(NULL)                              = 1741239525 (2025-03-06T08:38:45+0300)
+write(1, "\320\236\321\200\320\270\320\263\320\270\320\275\320\260\320\273:\n", 18Оригинал:
+) = 18
+write(1, "64 36 37 11 \n", 1364 36 37 11
+)          = 13
+gettimeofday({tv_sec=1741239525, tv_usec=916798}, NULL) = 0
+rt_sigaction(SIGRT_1, {sa_handler=0x7fd7c33b1870, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fd7c3362520}, NULL, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fd7c2b00000
+mprotect(0x7fd7c2b01000, 8388608, PROT_READ|PROT_WRITE) = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x7fd7c3300910, parent_tid=0x7fd7c3300910, exit_signal=0, stack=0x7fd7c2b00000, stack_size=0x7fff00, tls=0x7fd7c3300640}, 88) = -1 ENOSYS (Function not implemented)
+clone(child_stack=0x7fd7c32ffef0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTIDstrace: Process 1846 attached
+, parent_tid=[1846], tls=0x7fd7c3300640, child_tidptr=0x7fd7c3300910) = 1846
+[pid  1846] set_robust_list(0x7fd7c3300920, 24 <unfinished ...>
+[pid  1845] rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+[pid  1846] <... set_robust_list resumed>) = 0
+[pid  1845] <... rt_sigprocmask resumed>NULL, 8) = 0
+[pid  1846] rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+[pid  1845] mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0 <unfinished ...>
+[pid  1846] <... rt_sigprocmask resumed>NULL, 8) = 0
+[pid  1845] <... mmap resumed>)         = 0x7fd7c22f0000
+[pid  1846] openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+[pid  1845] mprotect(0x7fd7c22f1000, 8388608, PROT_READ|PROT_WRITE <unfinished ...>
+[pid  1846] <... openat resumed>)       = 3
+[pid  1845] <... mprotect resumed>)     = 0
+[pid  1846] newfstatat(3, "",  <unfinished ...>
+[pid  1845] futex(0x7fd7c358aa98, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid  1846] <... newfstatat resumed>{st_mode=S_IFREG|0644, st_size=16555, ...}, AT_EMPTY_PATH) = 0
+[pid  1846] mmap(NULL, 16555, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fd7c354b000
+[pid  1846] close(3)                    = 0
+[pid  1846] mmap(NULL, 134217728, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x7fd7ba2f0000
+[pid  1846] munmap(0x7fd7ba2f0000, 30474240) = 0
+[pid  1846] munmap(0x7fd7c0000000, 36634624) = 0
+[pid  1846] mprotect(0x7fd7bc000000, 135168, PROT_READ|PROT_WRITE) = 0
+[pid  1846] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 3
+[pid  1846] read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+[pid  1846] newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=125488, ...}, AT_EMPTY_PATH) = 0
+[pid  1846] mmap(NULL, 127720, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fd7c22d0000
+[pid  1846] mmap(0x7fd7c22d3000, 94208, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7fd7c22d3000        
+[pid  1846] mmap(0x7fd7c22ea000, 16384, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a000) = 0x7fd7c22ea000
+[pid  1846] mmap(0x7fd7c22ee000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1d000) = 0x7fd7c22ee000       
+[pid  1846] close(3)                    = 0
+[pid  1846] mprotect(0x7fd7c22ee000, 4096, PROT_READ) = 0
+[pid  1846] futex(0x7fd7c358aa98, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid  1845] <... futex resumed>)        = 0
+[pid  1846] <... futex resumed>)        = 1
+[pid  1845] futex(0x7fd7c358aa98, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid  1846] munmap(0x7fd7c354b000, 16555 <unfinished ...>
+[pid  1845] <... futex resumed>)        = 0
+[pid  1846] <... munmap resumed>)       = 0
+[pid  1845] rt_sigprocmask(SIG_BLOCK, ~[],  <unfinished ...>
+[pid  1846] futex(0x7fd7c22ef210, FUTEX_WAKE_PRIVATE, 2147483647 <unfinished ...>
+[pid  1845] <... rt_sigprocmask resumed>[], 8) = 0
+[pid  1845] clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x7fd7c2af0910, parent_tid=0x7fd7c2af0910, exit_signal=0, stack=0x7fd7c22f0000, stack_size=0x7fff00, tls=0x7fd7c2af0640} <unfinished ...>
+[pid  1846] <... futex resumed>)        = 0
+[pid  1845] <... clone3 resumed>, 88)   = -1 ENOSYS (Function not implemented)
+[pid  1846] rt_sigprocmask(SIG_BLOCK, ~[RT_1],  <unfinished ...>
+[pid  1845] clone(child_stack=0x7fd7c2aefef0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID <unfinished ...>
+[pid  1846] <... rt_sigprocmask resumed>NULL, 8) = 0
+strace: Process 1847 attached
+[pid  1846] madvise(0x7fd7c2b00000, 8368128, MADV_DONTNEED <unfinished ...>
+[pid  1845] <... clone resumed>, parent_tid=[1847], tls=0x7fd7c2af0640, child_tidptr=0x7fd7c2af0910) = 1847
+[pid  1847] set_robust_list(0x7fd7c2af0920, 24 <unfinished ...>
+[pid  1845] rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+[pid  1846] <... madvise resumed>)      = 0
+[pid  1847] <... set_robust_list resumed>) = 0
+[pid  1845] <... rt_sigprocmask resumed>NULL, 8) = 0
+[pid  1846] exit(0 <unfinished ...>
+[pid  1845] futex(0x7fd7c3300910, FUTEX_WAIT_BITSET|FUTEX_CLOCK_REALTIME, 1846, NULL, FUTEX_BITSET_MATCH_ANY <unfinished ...>        
+[pid  1847] rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+[pid  1846] <... exit resumed>)         = ?
+[pid  1847] <... rt_sigprocmask resumed>NULL, 8) = 0
+[pid  1845] <... futex resumed>)        = 0
+[pid  1846] +++ exited with 0 +++
+[pid  1845] futex(0x7fd7c2af0910, FUTEX_WAIT_BITSET|FUTEX_CLOCK_REALTIME, 1847, NULL, FUTEX_BITSET_MATCH_ANY <unfinished ...>        
+[pid  1847] rt_sigprocmask(SIG_BLOCK, ~[RT_1], NULL, 8) = 0
+[pid  1847] madvise(0x7fd7c22f0000, 8368128, MADV_DONTNEED) = 0
+[pid  1847] exit(0)                     = ?
+[pid  1847] +++ exited with 0 +++
+<... futex resumed>)                    = 0
+gettimeofday({tv_sec=1741239526, tv_usec=3414}, NULL) = 0
+write(1, "\320\236\321\202\321\201\320\276\321\200\321\202\320\270\321\200\320\276\320\262\320\260\320\275\320\275\321\213\320\271:\n", 32Отсортированный:
+) = 32
+write(1, "11 36 37 64 \n", 1311 36 37 64
+)          = 13
+write(1, "\320\227\320\260\320\275\321\217\320\273\320\276 \320\262\321\200\320\265\320\274\320\265\320\275\320\270: 0.0"..., 51Заняло времени: 0.086616 секунд
+) = 51
+write(1, "\320\232\320\276\320\273\320\270\321\207\320\265\321\201\321\202\320\262\320\276 \320\277\320\276\321\202\320\276\320\272\320"..., 39Количество потоков: 2
+) = 39
+lseek(0, -1, SEEK_CUR)                  = -1 ESPIPE (Illegal seek)
+exit_group(0)                           = ?
++++ exited with 0 +++
