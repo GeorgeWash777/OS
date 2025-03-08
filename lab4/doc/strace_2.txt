@@ -1,0 +1,148 @@
+root@LAPTOP-CGCBKBHR:/home/OS/OS_labs/lab4/src# strace -f ./progtwo
+execve("./progtwo", ["./progtwo"], 0x7fffcca27d98 /* 18 vars */) = 0
+brk(NULL)                               = 0x7fffdb2f9000
+arch_prctl(0x3001 /* ARCH_??? */, 0x7fffe213c250) = -1 EINVAL (Invalid argument)
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f6b5e7d0000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=16555, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 16555, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f6b5e7d6000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\302\211\332Pq\2439\235\350\223\322\257\201\326\243\f"..., 68, 896) = 68
+newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=2220400, ...}, AT_EMPTY_PATH) = 0
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+mmap(NULL, 2264656, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f6b5e560000
+mprotect(0x7f6b5e588000, 2023424, PROT_NONE) = 0
+mmap(0x7f6b5e588000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7f6b5e588000
+mmap(0x7f6b5e71d000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bd000) = 0x7f6b5e71d000   
+mmap(0x7f6b5e776000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x215000) = 0x7f6b5e776000
+mmap(0x7f6b5e77c000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f6b5e77c000
+close(3)                                = 0
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f6b5e550000
+arch_prctl(ARCH_SET_FS, 0x7f6b5e550740) = 0
+set_tid_address(0x7f6b5e550a10)         = 3105
+set_robust_list(0x7f6b5e550a20, 24)     = 0
+rseq(0x7f6b5e5510e0, 0x20, 0, 0x53053053) = -1 ENOSYS (Function not implemented)
+mprotect(0x7f6b5e776000, 16384, PROT_READ) = 0
+mprotect(0x7f6b5e7de000, 4096, PROT_READ) = 0
+mprotect(0x7f6b5e7c8000, 8192, PROT_READ) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=8192*1024}) = 0
+munmap(0x7f6b5e7d6000, 16555)           = 0
+getrandom("\xd3\x95\x61\xec\x14\x26\x1b\x3d", 8, GRND_NONBLOCK) = 8
+brk(NULL)                               = 0x7fffdb2f9000
+brk(0x7fffdb31a000)                     = 0x7fffdb31a000
+openat(AT_FDCWD, "./libImpl1.so", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=15568, ...}, AT_EMPTY_PATH) = 0
+getcwd("/home/OS/OS_labs/lab4/src", 128) = 26
+mmap(NULL, 16432, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f6b5e540000
+mmap(0x7f6b5e541000, 4096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7f6b5e541000
+mmap(0x7f6b5e542000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f6b5e542000       
+mmap(0x7f6b5e543000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f6b5e543000
+close(3)                                = 0
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=16555, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 16555, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f6b5e7d6000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=940560, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 942344, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f6b5e450000
+mmap(0x7f6b5e45e000, 507904, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe000) = 0x7f6b5e45e000
+mmap(0x7f6b5e4da000, 372736, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x8a000) = 0x7f6b5e4da000    
+mmap(0x7f6b5e535000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe4000) = 0x7f6b5e535000
+close(3)                                = 0
+mprotect(0x7f6b5e535000, 4096, PROT_READ) = 0
+mprotect(0x7f6b5e543000, 4096, PROT_READ) = 0
+munmap(0x7f6b5e7d6000, 16555)           = 0
+newfstatat(1, "", {st_mode=S_IFCHR|0640, st_rdev=makedev(0x4, 0x2), ...}, AT_EMPTY_PATH) = 0
+ioctl(1, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+write(1, "Input program code:\n", 20Input program code:
+)   = 20
+write(1, " 0 -> Library switch\n", 21 0 -> Library switch
+)  = 21
+write(1, " 1 -> PrimeCount\n", 17 1 -> PrimeCount
+)      = 17
+write(1, " 2 -> GCF\n", 10 2 -> GCF
+)             = 10
+write(1, "-1 -> Exit\n", 11-1 -> Exit
+)            = 11
+newfstatat(0, "", {st_mode=S_IFCHR|0640, st_rdev=makedev(0x4, 0x2), ...}, AT_EMPTY_PATH) = 0
+ioctl(0, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+read(0, 1
+"1\n", 4096)                    = 2
+write(1, "Enter A and B: ", 15Enter A and B: )         = 15
+read(0, 5 10
+"5 10\n", 4096)                 = 5
+write(1, "PrimeCount(5, 10) = 2\n", 22PrimeCount(5, 10) = 2
+) = 22
+write(1, "Implementation used: ./libImpl1."..., 35Implementation used: ./libImpl1.so
+) = 35
+write(1, "Input program code:\n", 20Input program code:
+)   = 20
+write(1, " 0 -> Library switch\n", 21 0 -> Library switch
+)  = 21
+write(1, " 1 -> PrimeCount\n", 17 1 -> PrimeCount
+)      = 17
+write(1, " 2 -> GCF\n", 10 2 -> GCF
+)             = 10
+write(1, "-1 -> Exit\n", 11-1 -> Exit
+)            = 11
+read(0, 0
+"0\n", 4096)                    = 2
+munmap(0x7f6b5e540000, 16432)           = 0
+munmap(0x7f6b5e450000, 942344)          = 0
+openat(AT_FDCWD, "./libImpl2.so", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=15592, ...}, AT_EMPTY_PATH) = 0
+getcwd("/home/OS/OS_labs/lab4/src", 128) = 26
+mmap(NULL, 16432, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f6b5e540000
+mmap(0x7f6b5e541000, 4096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7f6b5e541000
+mmap(0x7f6b5e542000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f6b5e542000       
+mmap(0x7f6b5e543000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f6b5e543000
+close(3)                                = 0
+mprotect(0x7f6b5e543000, 4096, PROT_READ) = 0
+write(1, "Library switched successfully!\n", 31Library switched successfully!
+) = 31
+write(1, "Current lib: ./libImpl2.so\n", 27Current lib: ./libImpl2.so
+) = 27
+write(1, "Input program code:\n", 20Input program code:
+)   = 20
+write(1, " 0 -> Library switch\n", 21 0 -> Library switch
+)  = 21
+write(1, " 1 -> PrimeCount\n", 17 1 -> PrimeCount
+)      = 17
+write(1, " 2 -> GCF\n", 10 2 -> GCF
+)             = 10
+write(1, "-1 -> Exit\n", 11-1 -> Exit
+)            = 11
+read(0, 2
+"2\n", 4096)                    = 2
+write(1, "Enter C and D: ", 15Enter C and D: )         = 15
+read(0, 2 4
+"2 4\n", 4096)                  = 4
+write(1, "GCF(2, 4) = 2\n", 14GCF(2, 4) = 2
+)         = 14
+write(1, "Implementation used: ./libImpl2."..., 35Implementation used: ./libImpl2.so
+) = 35
+write(1, "Input program code:\n", 20Input program code:
+)   = 20
+write(1, " 0 -> Library switch\n", 21 0 -> Library switch
+)  = 21
+write(1, " 1 -> PrimeCount\n", 17 1 -> PrimeCount
+)      = 17
+write(1, " 2 -> GCF\n", 10 2 -> GCF
+)             = 10
+write(1, "-1 -> Exit\n", 11-1 -> Exit
+)            = 11
+read(0, -1
+"-1\n", 4096)                   = 3
+munmap(0x7f6b5e540000, 16432)           = 0
+lseek(0, -1, SEEK_CUR)                  = -1 ESPIPE (Illegal seek)
+exit_group(0)                           = ?
++++ exited with 0 +++
+root@LAPTOP-CGCBKBHR:/home/OS/OS_labs/lab4/src# 
